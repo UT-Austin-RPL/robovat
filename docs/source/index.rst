@@ -11,6 +11,9 @@ Welcome to RPL-robovat's documentation!
    :caption: Tutorial
 
    readme
+   notes/installation.rst
+   notes/quick_example.rst
+
 
 .. toctree::
    :glob:

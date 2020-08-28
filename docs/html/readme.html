@@ -37,7 +37,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="RPL_robovat" href="modules/modules.html" />
+    <link rel="next" title="Installation" href="notes/installation.html" />
     <link rel="prev" title="Welcome to RPL-robovat’s documentation!" href="index.html" /> 
 </head>
 
@@ -83,11 +83,22 @@
               
             
             
-              <p class="caption"><span class="caption-text">README:</span></p>
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notes/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notes/installation.html#assets-setup">Assets setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/installation.html#virtual-environment-recommendation">Virtual environment recommendation</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Environment Reference:</span></p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notes/quick_example.html">Quick Introduction by Example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notes/quick_example.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/quick_example.html#environment-creation">Environment creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notes/quick_example.html#grasping-example">Grasping example</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules/modules.html">RPL_robovat</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="modules/robovat.html">robovat package</a><ul>
@@ -96,14 +107,12 @@
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.envs.push.html">robovat.envs.push package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.envs.html#module-robovat.envs.arm_env">robovat.envs.arm_env module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.envs.html#module-robovat.envs.robot_env">robovat.envs.robot_env module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.envs.html#module-robovat.envs">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.io.html">robovat.io package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.io.html#module-robovat.io.episode_generation">robovat.io.episode_generation module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.io.html#module-robovat.io.hdf5_utils">robovat.io.hdf5_utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.io.html#module-robovat.io.pickle_utils">robovat.io.pickle_utils module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.io.html#module-robovat.io">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.math.html">robovat.math package</a><ul>
@@ -112,7 +121,6 @@
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.math.html#module-robovat.math.point">robovat.math.point module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.math.html#module-robovat.math.pose">robovat.math.pose module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.math.html#module-robovat.math.quaternion">robovat.math.quaternion module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.math.html#module-robovat.math">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.observations.html">robovat.observations package</a><ul>
@@ -121,7 +129,6 @@
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.observations.html#module-robovat.observations.camera_obs">robovat.observations.camera_obs module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.observations.html#module-robovat.observations.observation">robovat.observations.observation module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.observations.html#module-robovat.observations.pose_obs">robovat.observations.pose_obs module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.observations.html#module-robovat.observations">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.perception.html">robovat.perception package</a><ul>
@@ -129,7 +136,6 @@
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.perception.html#module-robovat.perception.depth_utils">robovat.perception.depth_utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.perception.html#module-robovat.perception.image_utils">robovat.perception.image_utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.perception.html#module-robovat.perception.point_cloud_utils">robovat.perception.point_cloud_utils module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.perception.html#module-robovat.perception">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.policies.html">robovat.policies package</a><ul>
@@ -137,21 +143,19 @@
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.policies.html#module-robovat.policies.policy">robovat.policies.policy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.policies.html#module-robovat.policies.push_policy">robovat.policies.push_policy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.policies.html#module-robovat.policies.random_policy">robovat.policies.random_policy module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.policies.html#module-robovat.policies">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.reward_fns.html">robovat.reward_fns package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.reward_fns.html#module-robovat.reward_fns.grasp_reward">robovat.reward_fns.grasp_reward module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.reward_fns.html#module-robovat.reward_fns.push_reward">robovat.reward_fns.push_reward module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.reward_fns.html#module-robovat.reward_fns.reward_fn">robovat.reward_fns.reward_fn module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.reward_fns.html#module-robovat.reward_fns">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.robots.html">robovat.robots package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="modules/robovat.robots.franka_panda.html">robovat.robots.franka_panda package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.robots.sawyer.html">robovat.robots.sawyer package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.robots.html#module-robovat.robots.robot">robovat.robots.robot module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.robots.html#module-robovat.robots.robot_command">robovat.robots.robot_command module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.robots.html#module-robovat.robots">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.simulation.html">robovat.simulation package</a><ul>
@@ -166,19 +170,17 @@
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.simulation.html#module-robovat.simulation.joint">robovat.simulation.joint module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.simulation.html#module-robovat.simulation.link">robovat.simulation.link module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.simulation.html#module-robovat.simulation.simulator">robovat.simulation.simulator module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.simulation.html#module-robovat.simulation">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="modules/robovat.utils.html">robovat.utils package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.utils.html#module-robovat.utils.logging">robovat.utils.logging module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.utils.html#module-robovat.utils.mesh_utils">robovat.utils.mesh_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="modules/robovat.utils.html#robovat-utils-planning-utils-module">robovat.utils.planning_utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.utils.html#module-robovat.utils.string_utils">robovat.utils.string_utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.utils.html#module-robovat.utils.time_utils">robovat.utils.time_utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="modules/robovat.utils.html#module-robovat.utils.yaml_config">robovat.utils.yaml_config module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="modules/robovat.utils.html#module-robovat.utils">Module contents</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="modules/robovat.html#module-robovat">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="modules/third_party.html">third_party package</a><ul>
@@ -186,7 +188,6 @@
 <li class="toctree-l4"><a class="reference internal" href="modules/third_party.html#requirements">Requirements</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="modules/third_party.html#module-third_party">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -269,7 +270,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="modules/modules.html" class="btn btn-neutral float-right" title="RPL_robovat" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="notes/installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="Welcome to RPL-robovat’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
