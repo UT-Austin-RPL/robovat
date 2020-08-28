@@ -29,6 +29,7 @@ from robovat.utils import time_utils
 from robovat.utils.logging import logger
 from robovat.utils.yaml_config import YamlConfig
 
+import matplotlib.pyplot as plt
 
 def parse_args():
     """Parse arguments.
@@ -200,7 +201,11 @@ def main():
                     config=env_config,
                     debug=args.debug)
 
-    env.reset()
+    obs = env.reset()
+
+    # Example of plotting visual observation
+    plt.imshow(np.squeeze(obs[env.config.OBSERVATION.TYPE]))
+    plt.show()
 
     # Move the end-effector to the center of table
     end_effector_pose = env.robot.end_effector.pose.copy()

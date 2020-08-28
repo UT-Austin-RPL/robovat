@@ -5,7 +5,7 @@ DEBUG: 0
 MAX_STEPS: null
 
 OBSERVATION:
-  # Choose between `depth` and `point_cloud`.
+  # Choose between `depth` and `rgb`.
   TYPE: 'depth'
 
 ACTION:
