@@ -14,8 +14,8 @@ NUM_GOAL_STEPS: null
 
 MOVABLE_NAME: 'YCB'
 USE_RANDOM_RGBA: 0
-MIN_MOVABLE_BODIES: 3
-MAX_MOVABLE_BODIES: 5
+MIN_MOVABLE_BODIES: 1
+MAX_MOVABLE_BODIES: 1
 
 
 MAX_STATE_PLOTS: 1
@@ -36,8 +36,8 @@ ACTION:
     HIGH: [0.8, 0.55, 0.045]
 
   MOTION:
-    TRANSLATION_X: 0.1
-    TRANSLATION_Y: 0.1
+    TRANSLATION_X: 0.01
+    TRANSLATION_Y: 0.01
 
   MIN_DELTA_POSITION: 0.01
   MIN_DELTA_ANGLE: 0.01
@@ -92,7 +92,7 @@ KINECT2:
 
 TABLE:
   HEIGHT_RANGE: [0.8, 0.8]
-  X_RANGE: 0.76
+  X_RANGE: 0.8
   Y_RANGE: 1.22
 
 ARM:
@@ -106,7 +106,7 @@ ARM:
   GRIPPER_SAFE_HEIGHT: 0.4
 
   # The distance from the the end effector to the center of finger tips.
-  FINGER_TIP_OFFSET: 0.125
+  FINGER_TIP_OFFSET: -0.02
 
   # If move to the overhead position after grasping.
   MOVE_TO_OVERHEAD_AFTER_GRASP: 0
@@ -119,7 +119,7 @@ SIM:
   STEPS_CHECK: 100
 
   ARM:
-    CONFIG: 'configs/robots/franka_panda_sim_with_stick.yaml'
+    CONFIG: 'configs/robots/franka_panda_sim.yaml'
     ROBOT: 'franka_panda'
     POSE: [[0, 0, 0], [0, 0, 0]]
 
@@ -152,8 +152,8 @@ MOVABLE:
       'sim/envs/push_env/cylinder_large_r.urdf',
     ]
     POSE:
-      X: [0.4, 0.7]
-      Y: [-0.4, 0.4]
+      X: [0.5, 0.7]
+      Y: [-0.2, 0.2]
       Z: 0.2
       ROLL: [0, 0]
       PITCH: [0, 0]
@@ -166,17 +166,17 @@ MOVABLE:
 
   YCB:
     PATHS: [
-      'sim/ycb/*/*/*.urdf',
+      'sim/ycb/*soup_can/*/*.urdf',
     ]
     TARGET_PATHS: [
       'sim/ycb/025_mug/*/*.urdf',
     ]
     POSE:
-      X: [0.4, 0.7]
-      Y: [-0.4, 0.4]
-      Z: 0.2
-      ROLL: [-3.14, 3.14]
-      PITCH: [0, 3.14]
+      X: [0.5, 0.7]
+      Y: [-0.2, 0.2]
+      Z: 0.05
+      ROLL: 0. # [-3.14, 3.14]
+      PITCH: 0. # [0, 3.14]
       YAW: [-3.14, 3.14]
     SCALE:
       [0.8, 1.2]

@@ -89,6 +89,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#assets-setup">Assets setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#virtual-environment-recommendation">Virtual environment recommendation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-the-package">Install the package</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="quick_example.html">Quick Introduction by Example</a><ul>
@@ -261,9 +262,54 @@
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="assets-setup">
 <h2>Assets setup<a class="headerlink" href="#assets-setup" title="Permalink to this headline">¶</a></h2>
+<p>For most of the assets and configs, follow the following instruction:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget ftp://cs.stanford.edu/cs/cvgl/robovat/assets.zip
+wget ftp://cs.stanford.edu/cs/cvgl/robovat/configs.zip
+unzip assets.zip
+unzip configs.zip
+</pre></div>
+</div>
+<p>Here we have two scripts for you to download YCB object mesh files and
+generate urdf of YCB objects. The original robovat contains simplified and limited
+number of YCB objects. You can obtain more varieties following the process:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python ycb_downloader.py
+</pre></div>
+</div>
+<p>Then you need to export downloaded files into urdf files for easy
+use. The default path for dowload is <cite>assets/sim/ycb</cite>, and then
+you will need to run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python tools/export_ycb_urdf.py --input <span class="s2">&quot;assets/sim/ycb/*/google_16k/textured.obj&quot;</span> --rgba <span class="s2">&quot;1 1 1 1&quot;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="virtual-environment-recommendation">
 <h2>Virtual environment recommendation<a class="headerlink" href="#virtual-environment-recommendation" title="Permalink to this headline">¶</a></h2>
+<p>Pyenv virtualenv is recommended
+<cite>https://github.com/pyenv/pyenv-installer</cite> (conda is also good.)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl https://pyenv.run <span class="p">|</span> bash
+</pre></div>
+</div>
+<p>Then add</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.pyenv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>pyenv init -<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>pyenv virtualenv-init -<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>to your <cite>~/.bashrc</cite></p>
+<p>And follow pyenv instructions to install a python version you want,
+and create a virtual environment you want.</p>
+</div>
+<div class="section" id="install-the-package">
+<h2>Install the package<a class="headerlink" href="#install-the-package" title="Permalink to this headline">¶</a></h2>
+<p>Now you should be able to install the robovat environment. First of
+all, install the requirement:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+</div>
+<p>Then install the package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py install
+</pre></div>
+</div>
 </div>
 </div>
 

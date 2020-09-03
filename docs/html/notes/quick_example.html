@@ -89,12 +89,14 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="installation.html#assets-setup">Assets setup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="installation.html#virtual-environment-recommendation">Virtual environment recommendation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-the-package">Install the package</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Quick Introduction by Example</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#environment-creation">Environment creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#grasping-example">Grasping example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#grasping-explanation">Grasping Explanation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pushing-explanation">Pushing Explanation</a></li>
 </ul>
 </li>
 </ul>
@@ -264,9 +266,30 @@
 </div>
 <div class="section" id="environment-creation">
 <h2>Environment creation<a class="headerlink" href="#environment-creation" title="Permalink to this headline">¶</a></h2>
+<p>Here we will just go through a simple overview of the environment
+creation.</p>
+<p>A robovat environment is derived from a class <cite>arm_env.ArmEnv</cite>.</p>
+<p>Then add the import of environments in the
+file <cite>robotvat/envs/__init__.py_</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.FOLDER.FILE_NAME</span> <span class="kn">import</span> <span class="n">ENV_NAME</span>
+</pre></div>
 </div>
-<div class="section" id="grasping-example">
-<h2>Grasping example<a class="headerlink" href="#grasping-example" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="grasping-explanation">
+<h2>Grasping Explanation<a class="headerlink" href="#grasping-explanation" title="Permalink to this headline">¶</a></h2>
+<p>Here we explain more on the details of grasping objects. Simulation is
+not perfect. So you need to take care with some parameters to make
+simulation work more like in the real-world.</p>
+<p>For visualizing an example of grasping an object, you can run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python tools/demo_grasp.py --env FrankaPandaGraspEnv --debug <span class="m">1</span> --env_config configs/envs/franka_panda_envs/franka_panda_grasp_env.yaml
+</pre></div>
+</div>
+</div>
+<div class="section" id="pushing-explanation">
+<h2>Pushing Explanation<a class="headerlink" href="#pushing-explanation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python tools/demo_push.py --env FrankaPandaPushEnv --policy HeuristicPushPolicy --debug <span class="m">1</span> --env_config configs/envs/franka_panda_envs/franka_panda_push_env.yaml
+</pre></div>
+</div>
 </div>
 </div>
 
