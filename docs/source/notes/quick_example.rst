@@ -9,7 +9,11 @@ Environment creation
 Here we will just go through a simple overview of the environment
 creation.
 
-A robovat environment is derived from a class `arm_env.ArmEnv`.
+A robovat environment is derived from a class `arm_env.ArmEnv`. In
+robovat environments, it is usually assumed to executing a sequence of
+motion given an action. Therefore, you need to implement
+`_execute_action` method in an Environment object in order to complete
+one action.
 
 
 Then add the import of environments in the
@@ -40,6 +44,7 @@ Pushing Explanation
 -------------------
 
 
+For visualizing an example of pushing an object, you can run:
 
 .. code-block:: bash
                 

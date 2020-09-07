@@ -166,6 +166,13 @@ class Simulator(object):
         self.physics.remove_body(self._bodies[name].uid)
         del self._bodies[name]
 
+    def get_bodies(self):
+        """Return the list of all bodies.
+
+        """
+        bodies = [body for (body_name, body) in self._bodies.items()]
+        return bodies
+
     def add_constraint(self,
                        parent,
                        child,
